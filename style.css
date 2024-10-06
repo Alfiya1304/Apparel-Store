@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #01257D, #00FFFF); /* Deep navy blue to electric blue gradient */
+    color: #2F4F4F; /* Dark Slate Gray for text color */
+}
+
+.navbar {
+    background-color: #01257D; /* Deep navy blue for navbar */
+}
+
+.navbar-brand {
+    color: #FFD700 !important; /* Gold text for navbar brand */
+}
+
+.navbar .nav-link {
+    color: #CCCCCC !important; /* Light grey for navbar links */
+}
+
+/* Specific styles for Apparel Store and Cart links */
+.navbar .nav-link.apparel {
+    color: #FFD700; /* Gold for emphasis */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.navbar .nav-link.cart {
+    color: #A9A9A9; /* Dark grey for Cart link */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.navbar .nav-link.apparel:hover, .navbar .nav-link.cart:hover {
+    color: #FFA500; /* Darker orange on hover for emphasis */
+}
+
+/* General navbar link styles */
+.nav-link {
+    color: #CCCCCC !important; /* Light grey for other links */
+}
+
+h1 {
+    color: #FFD700; /* Gold for main heading to ensure visibility */
+    margin-bottom: 20px;
+    text-align: center; /* Centering main heading */
+}
+
+h2 {
+    color: #2F4F4F; /* Dark Slate Gray for subheadings */
+    margin-top: 30px;
+    text-align: center; /* Centering subheadings */
+}
+
+.container {
+    margin-top: 20px;
+    padding: 15px; /* Adding padding to container */
+}
+
+.card {
+    border: 1px solid #01257D; /* Deep navy blue border for cards */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.2s; /* Smooth scale transition */
+    background-color: #ffffff; /* White background for card */
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+    box-shadow: 0 4px 20px rgba(1, 37, 125, 0.3); /* Shadow effect on hover */
+}
+
+.card-img-top {
+    border-top-left-radius: 10px; /* Rounded corners on the top */
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 15px; /* Added padding for card body */
+}
+
+.card-title {
+    color: #01257D; /* Deep navy blue for card titles */
+}
+
+.card-text {
+    color: #2F4F4F; /* Dark Slate Gray for card text */
+}
+
+.btn-primary {
+    background-color: #00FFFF; /* Electric blue for primary buttons */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #00e0e0; /* Slightly darker electric blue on hover */
+}
+
+.btn-success {
+    background-color: #FFA500; /* Orange for success buttons */
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #e59400; /* Darker orange on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #01257D; /* Deep navy blue for footer */
+    color: #FFFFFF; /* White text for footer */
+    margin-top: 20px; /* Space above the footer */
+}
+
+/* Style for cart count */
+#cart-count {
+    color: black; /* Black color for cart count */
+}
+
+/* Style for the cart list items */
+.cart-list {
+    list-style-type: none; /* Remove bullet points from cart items */
+    padding: 0; /* Remove padding */
+}
+
+.cart-list li {
+    color: black; /* Black color for cart items */
+    margin-bottom: 10px; /* Space between items */
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2; /* Ensure cart is above the content */
+}
+
+.cart-count {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: white;
+    color: #f44336;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3; /* Ensure overlay is above everything */
+}
+
+.cart-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cart-item {
+    margin-bottom: 10px;
+}
+
+.cart-item-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item-name {
+    flex-grow: 1;
+}
+
+.cart-item-price {
+    margin-left: 10px;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-action {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    color: #FFD700; /* Gold color for the brand name */
+    font-size: 24px; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar-brand:hover {
+    color: #FFA500; /* Darker orange on hover */
+}

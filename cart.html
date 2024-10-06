@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Apparel Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="options.html">Apparel Store</a>
+        <div class="ml-auto">
+            <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Your Cart</h1>
+        <ul class="list-group" id="cart-list"></ul>
+        <h2 class="mt-4">Total Amount: ₹<span id="total-amount">0.00</span></h2>
+
+        <h2 class="mt-4">Delivery Address</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success mt-4">Order Now</button>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to load cart items on the cart page
+        function loadCartItems() {
+            const cartList = document.getElementById('cart-list');
+            const totalAmount = document.getElementById('total-amount');
+            cartList.innerHTML = ''; // Clear existing cart items
+            let total = 0; // Initialize total
+
+            // Display each item in the cart
+            cart.forEach((item, index) => {
+                cartList.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        ${item.name} - ₹${item.price}
+                        <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
+                    </li>
+                `;
+                total += item.price; // Calculate total
+            });
+
+            totalAmount.textContent = total.toFixed(2); // Display total amount
+        }
+
+        // Load cart items on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            updateCartCount(); // Update cart count
+            loadCartItems(); // Load cart items
+        });
+
+        // Order form submission handler
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve name and address
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+
+            // Store any order details you need here (if necessary)
+            // Redirect to thank you page
+            window.location.href = 'thank-you.html';
+        });
+    </script>
+</body>
+</html>

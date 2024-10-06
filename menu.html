@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Apparel Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Adjust this height as needed */
+            object-fit: cover; /* Ensures images cover the space without distortion */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Apparel Store</a>
+        <div class="ml-auto">
+            <a href="cart.html" class="nav-link">Cart <span id="cart-count">0</span></a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Clothing Menu</h1>
+
+        <!-- Men's Collection Section -->
+        <h2 class="mt-4">Men's Collection</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img\casual.jpg" class="card-img-top" alt="Men's Casual Shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Casual Shirt</h5>
+                        <p class="card-text">Price: ₹1000</p>
+                        <button onclick="addToCart('Men\'s Casual Shirt', 1000)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src=img\formalshirt.webp class="card-img-top" alt="Men's Formal Shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Formal Shirt</h5>
+                        <p class="card-text">Price: ₹1500</p>
+                        <button onclick="addToCart('Men\'s Formal Shirt', 1500)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src=img\jeans.webp class="card-img-top" alt="Men's Jeans">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Jeans</h5>
+                        <p class="card-text">Price: ₹2000</p>
+                        <button onclick="addToCart('Men\'s Jeans', 2000)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Women's Collection Section -->
+        <h2 class="mt-4">Women's Collection</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src=img\dress.webp class="card-img-top" alt="Women's Dress">
+                    <div class="card-body">
+                        <h5 class="card-title">Women's Dress</h5>
+                        <p class="card-text">Price: ₹1500</p>
+                        <button onclick="addToCart('Women\'s Dress', 1500)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src=img\top.webp class="card-img-top" alt="Women's Top">
+                    <div class="card-body">
+                        <h5 class="card-title">Women's Top</h5>
+                        <p class="card-text">Price: ₹500</p>
+                        <button onclick="addToCart('Women\'s Top', 500)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src=img\skirt.webp class="card-img-top" alt="Women's Skirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Women's Skirt</h5>
+                        <p class="card-text">Price: ₹900</p>
+                        <button onclick="addToCart('Women\'s Skirt', 900)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kids' Collection Section -->
+        <h2 class="mt-4">Kids' Collection</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src=img\tshirtkids.avif class="card-img-top" alt="Kids' T-Shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Kids' T-Shirt</h5>
+                        <p class="card-text">Price: ₹700</p>
+                        <button onclick="addToCart('Kids\' T-Shirt', 700)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img\kids dress.jpg" class="card-img-top" alt="Kids' Dress">
+                    <div class="card-body">
+                        <h5 class="card-title">Kids' Dress</h5>
+                        <p class="card-text">Price: ₹1000</p>
+                        <button onclick="addToCart('Kids\' Dress', 600)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src=img\kidsshorts.webp class="card-img-top" alt="Kids' Shorts">
+                    <div class="card-body">
+                        <h5 class="card-title">Kids' Shorts</h5>
+                        <p class="card-text">Price: ₹400</p>
+                        <button onclick="addToCart('Kids\' Shorts', 400)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
